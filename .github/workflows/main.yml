@@ -1,0 +1,31 @@
+name: UpdateNordVPNlist
+
+on:
+  schedule:
+    - cron:  '0 */6 * * *'
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Download server lists and update list files
+        run: |
+          mkdir -p generic
+          declare -a countrycode=("au" "fr" "nl" "sg" "uk" "us")
+          declare -a countryid=("13" "74" "153" "195" "227" "228")
+          for (( i=0; i<${#countrycode[@]}; i++ ));
+          do
+            curl --silent "https://api.nordvpn.com/v1/servers/recommendations?filters\[country_id\]=${countryid[$i]}&filters\[servers_technologies\]\[identifier\]=proxy_ssl&limit=100" | jq --raw-output '.[].hostname' > generic/${countrycode[$i]}.txt
+          done
+
+      - name: Commit and push changes
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+          message: "Automatically updated Server lists using GitHub Actions"
