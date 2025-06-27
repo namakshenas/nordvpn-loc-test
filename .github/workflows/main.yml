@@ -2,7 +2,7 @@ name: UpdateNordVPNlist
 
 on:
   schedule:
-    - cron:  '0 */6 * * *'
+    - cron: '0 */6 * * *'  # Every 6 hours
 
   workflow_dispatch:
 
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Download server lists and update list files
         run: |
@@ -24,8 +24,9 @@ jobs:
           done
 
       - name: Commit and push changes
-        uses: actions-js/push@master
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
-          message: "Automatically updated Server lists using GitHub Actions"
+          commit_message: "Update server lists"
+          commit_user_name: 'github-actions[bot]'
+          commit_user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_author: 'github-actions[bot] <github-actions[bot]@users.noreply.github.com>'
