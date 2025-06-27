@@ -2,7 +2,7 @@ name: UpdateNordVPNlist
 
 on:
   schedule:
-    - cron: '0 */1 * * *'  # Every 6 hours
+    - cron: '0 */1 * * *'  # Every 1 hours
 
   workflow_dispatch:
 
@@ -15,12 +15,31 @@ jobs:
 
       - name: Download server lists and update list files
         run: |
-          mkdir -p list
+          mkdir -p list list-IR
           declare -a countrycode=("au" "fr" "nl" "sg" "uk" "us")
           declare -a countryid=("13" "74" "153" "195" "227" "228")
           for (( i=0; i<${#countrycode[@]}; i++ ));
           do
             curl --silent "https://api.nordvpn.com/v1/servers/recommendations?filters\[country_id\]=${countryid[$i]}&filters\[servers_technologies\]\[identifier\]=proxy_ssl&limit=100" | jq --raw-output '.[].hostname' | sort > list/${countrycode[$i]}.txt
+          done
+
+      - name: Test server connectivity and create low-latency filtered lists
+        run: |
+          for country in au fr nl sg uk us; do
+            echo "Testing $country servers for general connectivity..."
+            > list-IR/${country}.txt
+            while IFS= read -r server; do
+              # Test basic connectivity with ping
+              if ping -c 3 -W 2000 "$server" >/dev/null 2>&1; then
+                # Get average ping time
+                avg_ping=$(ping -c 3 -W 2000 "$server" 2>/dev/null | tail -1 | awk -F'/' '{print $5}' | cut -d'.' -f1)
+                # Filter for low latency (<100ms for better Iran connectivity)
+                if [[ -n "$avg_ping" && "$avg_ping" -lt 100 ]]; then
+                  echo "$server" >> list-IR/${country}.txt
+                fi
+              fi
+            done < list/${country}.txt
+            sort -o list-IR/${country}.txt list-IR/${country}.txt
           done
 
       - name: Commit and push changes
