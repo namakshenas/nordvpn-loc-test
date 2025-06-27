@@ -2,7 +2,7 @@ name: UpdateNordVPNlist
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # Every 6 hours
+    - cron: '0 */1 * * *'  # Every 6 hours
 
   workflow_dispatch:
 
@@ -15,12 +15,12 @@ jobs:
 
       - name: Download server lists and update list files
         run: |
-          mkdir -p generic
+          mkdir -p list
           declare -a countrycode=("au" "fr" "nl" "sg" "uk" "us")
           declare -a countryid=("13" "74" "153" "195" "227" "228")
           for (( i=0; i<${#countrycode[@]}; i++ ));
           do
-            curl --silent "https://api.nordvpn.com/v1/servers/recommendations?filters\[country_id\]=${countryid[$i]}&filters\[servers_technologies\]\[identifier\]=proxy_ssl&limit=100" | jq --raw-output '.[].hostname' | sort > generic/${countrycode[$i]}.txt
+            curl --silent "https://api.nordvpn.com/v1/servers/recommendations?filters\[country_id\]=${countryid[$i]}&filters\[servers_technologies\]\[identifier\]=proxy_ssl&limit=100" | jq --raw-output '.[].hostname' | sort > list/${countrycode[$i]}.txt
           done
 
       - name: Commit and push changes
