@@ -1313,7 +1313,6 @@ us8489.nordvpn.com
 us8490.nordvpn.com
 us8491.nordvpn.com
 us8492.nordvpn.com
-us8493.nordvpn.com
 us8494.nordvpn.com
 us8495.nordvpn.com
 us8496.nordvpn.com
@@ -1721,7 +1720,6 @@ us9393.nordvpn.com
 us9394.nordvpn.com
 us9395.nordvpn.com
 us9396.nordvpn.com
-us9397.nordvpn.com
 us9398.nordvpn.com
 us9399.nordvpn.com
 us9401.nordvpn.com
