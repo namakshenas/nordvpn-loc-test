@@ -5,6 +5,7 @@ us10017.nordvpn.com
 us10018.nordvpn.com
 us10019.nordvpn.com
 us10021.nordvpn.com
+us10022.nordvpn.com
 us10023.nordvpn.com
 us10024.nordvpn.com
 us10025.nordvpn.com
@@ -1304,6 +1305,7 @@ us8491.nordvpn.com
 us8492.nordvpn.com
 us8493.nordvpn.com
 us8494.nordvpn.com
+us8495.nordvpn.com
 us8496.nordvpn.com
 us8497.nordvpn.com
 us8498.nordvpn.com
@@ -1456,6 +1458,7 @@ us8710.nordvpn.com
 us8711.nordvpn.com
 us8712.nordvpn.com
 us8713.nordvpn.com
+us8714.nordvpn.com
 us8715.nordvpn.com
 us8716.nordvpn.com
 us8717.nordvpn.com
@@ -1711,6 +1714,7 @@ us9395.nordvpn.com
 us9396.nordvpn.com
 us9397.nordvpn.com
 us9398.nordvpn.com
+us9399.nordvpn.com
 us9400.nordvpn.com
 us9401.nordvpn.com
 us9402.nordvpn.com
