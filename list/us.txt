@@ -395,6 +395,7 @@ us11659.nordvpn.com
 us11662.nordvpn.com
 us11663.nordvpn.com
 us11664.nordvpn.com
+us11665.nordvpn.com
 us11666.nordvpn.com
 us11667.nordvpn.com
 us11668.nordvpn.com
@@ -1245,6 +1246,7 @@ us8380.nordvpn.com
 us8381.nordvpn.com
 us8382.nordvpn.com
 us8383.nordvpn.com
+us8384.nordvpn.com
 us8385.nordvpn.com
 us8386.nordvpn.com
 us8388.nordvpn.com
