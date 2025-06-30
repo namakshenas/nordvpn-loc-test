@@ -662,6 +662,16 @@ us12012.nordvpn.com
 us12013.nordvpn.com
 us12014.nordvpn.com
 us12015.nordvpn.com
+us12028.nordvpn.com
+us12029.nordvpn.com
+us12030.nordvpn.com
+us12031.nordvpn.com
+us12032.nordvpn.com
+us12033.nordvpn.com
+us12034.nordvpn.com
+us12035.nordvpn.com
+us12036.nordvpn.com
+us12037.nordvpn.com
 us4735.nordvpn.com
 us5055.nordvpn.com
 us5057.nordvpn.com
