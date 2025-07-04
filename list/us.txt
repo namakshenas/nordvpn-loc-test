@@ -1454,6 +1454,7 @@ us8694.nordvpn.com
 us8695.nordvpn.com
 us8696.nordvpn.com
 us8697.nordvpn.com
+us8698.nordvpn.com
 us8699.nordvpn.com
 us8700.nordvpn.com
 us8701.nordvpn.com
@@ -1698,6 +1699,7 @@ us9368.nordvpn.com
 us9369.nordvpn.com
 us9370.nordvpn.com
 us9371.nordvpn.com
+us9372.nordvpn.com
 us9373.nordvpn.com
 us9374.nordvpn.com
 us9375.nordvpn.com
