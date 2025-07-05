@@ -12,7 +12,6 @@ au569.nordvpn.com
 au570.nordvpn.com
 au576.nordvpn.com
 au585.nordvpn.com
-au586.nordvpn.com
 au587.nordvpn.com
 au588.nordvpn.com
 au595.nordvpn.com
