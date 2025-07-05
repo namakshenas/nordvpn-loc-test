@@ -1,56 +1,22 @@
 name: UpdateNordVPNlist
 on:
   schedule:
-    - cron: '0 */1 * * *'  # Every 1 hours
+    - cron: '0 */1 * *'*  # Every 1 hours
   workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Download and filter server lists by latency
+      - name: Download server lists and update list files
         run: |
           mkdir -p list
           declare -a countrycode=("au" "fr" "nl" "sg" "uk" "us")
           declare -a countryid=("13" "74" "153" "195" "227" "228")
-          
-          # Install sshpass
-          sudo apt-get update && sudo apt-get install -y sshpass
-          
           for (( i=0; i<${#countrycode[@]}; i++ ));
           do
-            echo "Processing ${countrycode[$i]}..."
-            
-            # Get server list
-            curl --silent "https://api.nordvpn.com/v1/servers/recommendations?filters\[country_id\]=${countryid[$i]}&filters\[servers_technologies\]\[identifier\]=openvpn_udp&limit=5000" | jq --raw-output '.[].hostname' > temp_servers.txt
-            
-            # Test each server and filter by latency
-            > list/${countrycode[$i]}.txt  # Clear the file
-            
-            while read server; do
-              if [ ! -z "$server" ]; then
-                echo "Testing $server..."
-                latency=$(sshpass -p "${{ secrets.VPS_PASSWORD }}" ssh -o StrictHostKeyChecking=no -o ConnectTimeout=5 ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "ping -c 1 -W 3 $server | grep 'time=' | awk -F'time=' '{print \$2}' | awk '{print \$1}'" 2>/dev/null)
-                
-                if [ ! -z "$latency" ]; then
-                  # Remove 'ms' if present and compare
-                  latency_num=$(echo "$latency" | sed 's/ms//')
-                  if (( $(echo "$latency_num < 200" | bc -l) )); then
-                    echo "$server" >> list/${countrycode[$i]}.txt
-                    echo "✓ $server (${latency}ms)"
-                  fi
-                fi
-              fi
-            done < temp_servers.txt
-            
-            # Sort the results
-            sort list/${countrycode[$i]}.txt -o list/${countrycode[$i]}.txt
-            rm temp_servers.txt
+            curl --silent "https://api.nordvpn.com/v1/servers/recommendations?filters\[country_id\]=${countryid[$i]}&filters\[servers_technologies\]\[identifier\]=openvpn_udp&limit=5000" | jq --raw-output '.[].hostname' | sort > list/${countrycode[$i]}.txt
           done
-        env:
-          VPS_HOST: ${{ secrets.VPS_HOST }}
-          VPS_USER: ${{ secrets.VPS_USER }}
-          VPS_PASSWORD: ${{ secrets.VPS_PASSWORD }}
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
