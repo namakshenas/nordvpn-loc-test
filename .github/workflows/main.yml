@@ -1,28 +1,41 @@
 name: UpdateNordVPNlist
-
 on:
   schedule:
     - cron: '0 */1 * * *'  # Every 1 hours
-
   workflow_dispatch:
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
-
-      - name: Download server lists and update list files
+      - name: Download and filter server lists by latency
         run: |
           mkdir -p list
           declare -a countrycode=("au" "fr" "nl" "sg" "uk" "us")
           declare -a countryid=("13" "74" "153" "195" "227" "228")
+          
+          # Install sshpass and bc for password authentication and latency comparison
+          sudo apt-get update && sudo apt-get install -y sshpass bc
+          
           for (( i=0; i<${#countrycode[@]}; i++ ));
           do
-            curl --silent "https://api.nordvpn.com/v1/servers/recommendations?filters\[country_id\]=${countryid[$i]}&filters\[servers_technologies\]\[identifier\]=openvpn_udp&limit=5000" | jq --raw-output '.[].hostname' | sort > list/${countrycode[$i]}.txt
+            # Get server list
+            servers=$(curl --silent "https://api.nordvpn.com/v1/servers/recommendations?filters\[country_id\]=${countryid[$i]}&filters\[servers_technologies\]\[identifier\]=openvpn_udp&limit=5000" | jq --raw-output '.[].hostname')
+            
+            # Test latency and filter <50ms
+            echo "$servers" | while read server; do
+              if [ ! -z "$server" ]; then
+                latency=$(sshpass -p "${{ secrets.VPS_PASSWORD }}" ssh -o StrictHostKeyChecking=no -o ConnectTimeout=10 ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "ping -c 1 -W 2 $server 2>/dev/null | grep 'time=' | sed 's/.*time=\([0-9.]*\).*/\1/'" 2>/dev/null)
+                if [ ! -z "$latency" ] && (( $(echo "$latency < 50" | bc -l) )); then
+                  echo "$server"
+                fi
+              fi
+            done | sort > list/${countrycode[$i]}.txt
           done
-
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_USER: ${{ secrets.VPS_USER }}
+          VPS_PASSWORD: ${{ secrets.VPS_PASSWORD }}
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
