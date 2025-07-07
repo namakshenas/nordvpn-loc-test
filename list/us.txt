@@ -4,7 +4,6 @@ us10640.nordvpn.com
 us10641.nordvpn.com
 us10642.nordvpn.com
 us10643.nordvpn.com
-us10644.nordvpn.com
 us10645.nordvpn.com
 us10646.nordvpn.com
 us10647.nordvpn.com
@@ -14,7 +13,6 @@ us10650.nordvpn.com
 us10651.nordvpn.com
 us10652.nordvpn.com
 us10653.nordvpn.com
-us10654.nordvpn.com
 us10655.nordvpn.com
 us10656.nordvpn.com
 us10657.nordvpn.com
@@ -22,6 +20,7 @@ us11817.nordvpn.com
 us11818.nordvpn.com
 us11819.nordvpn.com
 us11820.nordvpn.com
+us11821.nordvpn.com
 us11822.nordvpn.com
 us8510.nordvpn.com
 us8511.nordvpn.com
@@ -94,6 +93,7 @@ us9864.nordvpn.com
 us9865.nordvpn.com
 us9866.nordvpn.com
 us9867.nordvpn.com
+us9868.nordvpn.com
 us9869.nordvpn.com
 us9870.nordvpn.com
 us9871.nordvpn.com
