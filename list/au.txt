@@ -22,7 +22,9 @@ au624.nordvpn.com
 au640.nordvpn.com
 au641.nordvpn.com
 au642.nordvpn.com
+au643.nordvpn.com
 au652.nordvpn.com
+au653.nordvpn.com
 au654.nordvpn.com
 au656.nordvpn.com
 au657.nordvpn.com
@@ -45,7 +47,6 @@ au725.nordvpn.com
 au726.nordvpn.com
 au727.nordvpn.com
 au728.nordvpn.com
-au729.nordvpn.com
 au730.nordvpn.com
 au731.nordvpn.com
 au732.nordvpn.com
@@ -77,9 +78,7 @@ au852.nordvpn.com
 au853.nordvpn.com
 au854.nordvpn.com
 au855.nordvpn.com
-au856.nordvpn.com
 au857.nordvpn.com
-au858.nordvpn.com
 au859.nordvpn.com
 au860.nordvpn.com
 au861.nordvpn.com
@@ -89,6 +88,7 @@ au864.nordvpn.com
 au865.nordvpn.com
 au866.nordvpn.com
 au867.nordvpn.com
+au868.nordvpn.com
 au869.nordvpn.com
 au870.nordvpn.com
 au871.nordvpn.com
