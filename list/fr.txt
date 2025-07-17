@@ -47,6 +47,7 @@ fr548.nordvpn.com
 fr549.nordvpn.com
 fr550.nordvpn.com
 fr551.nordvpn.com
+fr552.nordvpn.com
 fr553.nordvpn.com
 fr554.nordvpn.com
 fr555.nordvpn.com
@@ -286,7 +287,6 @@ fr990.nordvpn.com
 fr991.nordvpn.com
 fr992.nordvpn.com
 fr993.nordvpn.com
-fr994.nordvpn.com
 fr995.nordvpn.com
 fr996.nordvpn.com
 fr997.nordvpn.com
