@@ -81,7 +81,6 @@ fr678.nordvpn.com
 fr679.nordvpn.com
 fr680.nordvpn.com
 fr681.nordvpn.com
-fr682.nordvpn.com
 fr683.nordvpn.com
 fr684.nordvpn.com
 fr685.nordvpn.com
@@ -250,7 +249,6 @@ fr910.nordvpn.com
 fr911.nordvpn.com
 fr912.nordvpn.com
 fr913.nordvpn.com
-fr914.nordvpn.com
 fr915.nordvpn.com
 fr916.nordvpn.com
 fr917.nordvpn.com
