@@ -37,7 +37,6 @@ fr538.nordvpn.com
 fr539.nordvpn.com
 fr540.nordvpn.com
 fr541.nordvpn.com
-fr542.nordvpn.com
 fr543.nordvpn.com
 fr544.nordvpn.com
 fr545.nordvpn.com
@@ -58,7 +57,6 @@ fr597.nordvpn.com
 fr622.nordvpn.com
 fr639.nordvpn.com
 fr640.nordvpn.com
-fr641.nordvpn.com
 fr642.nordvpn.com
 fr660.nordvpn.com
 fr661.nordvpn.com
@@ -92,6 +90,7 @@ fr695.nordvpn.com
 fr696.nordvpn.com
 fr697.nordvpn.com
 fr698.nordvpn.com
+fr699.nordvpn.com
 fr700.nordvpn.com
 fr701.nordvpn.com
 fr702.nordvpn.com
@@ -103,7 +102,6 @@ fr740.nordvpn.com
 fr741.nordvpn.com
 fr742.nordvpn.com
 fr743.nordvpn.com
-fr744.nordvpn.com
 fr745.nordvpn.com
 fr746.nordvpn.com
 fr747.nordvpn.com
@@ -115,7 +113,6 @@ fr752.nordvpn.com
 fr755.nordvpn.com
 fr756.nordvpn.com
 fr757.nordvpn.com
-fr758.nordvpn.com
 fr759.nordvpn.com
 fr760.nordvpn.com
 fr761.nordvpn.com
@@ -181,6 +178,7 @@ fr828.nordvpn.com
 fr829.nordvpn.com
 fr830.nordvpn.com
 fr831.nordvpn.com
+fr832.nordvpn.com
 fr833.nordvpn.com
 fr834.nordvpn.com
 fr835.nordvpn.com
@@ -214,9 +212,7 @@ fr864.nordvpn.com
 fr865.nordvpn.com
 fr866.nordvpn.com
 fr867.nordvpn.com
-fr868.nordvpn.com
 fr869.nordvpn.com
-fr870.nordvpn.com
 fr871.nordvpn.com
 fr872.nordvpn.com
 fr873.nordvpn.com
@@ -280,6 +276,7 @@ fr985.nordvpn.com
 fr986.nordvpn.com
 fr987.nordvpn.com
 fr988.nordvpn.com
+fr989.nordvpn.com
 fr990.nordvpn.com
 fr991.nordvpn.com
 fr992.nordvpn.com
@@ -287,4 +284,5 @@ fr993.nordvpn.com
 fr994.nordvpn.com
 fr995.nordvpn.com
 fr996.nordvpn.com
+fr997.nordvpn.com
 fr998.nordvpn.com
