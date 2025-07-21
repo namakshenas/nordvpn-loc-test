@@ -137,6 +137,7 @@ au766.nordvpn.com
 au767.nordvpn.com
 au768.nordvpn.com
 au769.nordvpn.com
+au770.nordvpn.com
 au772.nordvpn.com
 au773.nordvpn.com
 au774.nordvpn.com
