@@ -286,6 +286,7 @@ fr989.nordvpn.com
 fr990.nordvpn.com
 fr991.nordvpn.com
 fr992.nordvpn.com
+fr993.nordvpn.com
 fr994.nordvpn.com
 fr995.nordvpn.com
 fr996.nordvpn.com
