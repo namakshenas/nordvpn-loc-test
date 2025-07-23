@@ -312,6 +312,7 @@ uk2242.nordvpn.com
 uk2243.nordvpn.com
 uk2244.nordvpn.com
 uk2245.nordvpn.com
+uk2246.nordvpn.com
 uk2247.nordvpn.com
 uk2248.nordvpn.com
 uk2249.nordvpn.com
@@ -706,6 +707,15 @@ uk2896.nordvpn.com
 uk2897.nordvpn.com
 uk2898.nordvpn.com
 uk2899.nordvpn.com
+uk2900.nordvpn.com
+uk2901.nordvpn.com
+uk2902.nordvpn.com
+uk2903.nordvpn.com
+uk2904.nordvpn.com
+uk2905.nordvpn.com
+uk2906.nordvpn.com
+uk2907.nordvpn.com
+uk2908.nordvpn.com
 uk765.nordvpn.com
 uk812.nordvpn.com
 uk813.nordvpn.com
