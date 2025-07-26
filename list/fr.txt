@@ -204,6 +204,7 @@ fr852.nordvpn.com
 fr853.nordvpn.com
 fr854.nordvpn.com
 fr855.nordvpn.com
+fr856.nordvpn.com
 fr857.nordvpn.com
 fr858.nordvpn.com
 fr859.nordvpn.com
