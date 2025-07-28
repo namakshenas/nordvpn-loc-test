@@ -64,7 +64,3 @@ sg545.nordvpn.com
 sg546.nordvpn.com
 sg547.nordvpn.com
 sg548.nordvpn.com
-sg549.nordvpn.com
-sg550.nordvpn.com
-sg551.nordvpn.com
-sg552.nordvpn.com
