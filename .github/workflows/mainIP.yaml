@@ -1,4 +1,4 @@
-name: Check VPN IP
+name: CheckVPNIP
 
 on:
   schedule:
