@@ -22,7 +22,9 @@ jobs:
       
       - name: Connect to NordVPN
         run: |
-          printf '%s\n%s\n' "${{ secrets.NORDVPN_USER }}" "${{ secrets.NORDVPN_PASS }}" | sudo nordvpn login
+          # Use legacy login method for headless environments
+          sudo nordvpn set technology legacy
+          printf '%s\n%s\n' "${{ secrets.NORDVPN_USER }}" "${{ secrets.NORDVPN_PASS }}" | sudo nordvpn login --legacy
           sudo nordvpn set protocol udp
           sudo nordvpn connect fr1031
           sleep 5
