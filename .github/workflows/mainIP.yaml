@@ -1,49 +1,47 @@
-name: CheckVPNIP
+name: CheckIPwithNordVPN
 
 on:
   schedule:
     - cron: '0 * * * *'  # Every hour
-  workflow_dispatch:  # Allow manual trigger
+  workflow_dispatch:     # Manual trigger for testing
 
 jobs:
   check-ip:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+    - name: Checkout
+      uses: actions/checkout@v4
       
-      - name: Install NordVPN
-        run: |
-          wget -qO - https://repo.nordvpn.com/gpg/nordvpn_public.asc | sudo apt-key add -
-          echo "deb https://repo.nordvpn.com/deb/nordvpn/debian stable main" | sudo tee /etc/apt/sources.list.d/nordvpn.list
-          sudo apt update
-          sudo apt install -y nordvpn
-      
-      - name: Connect to NordVPN
-        run: |
-          # Use legacy login method for headless environments
-          sudo nordvpn set technology legacy
-          printf '%s\n%s\n' "${{ secrets.NORDVPN_USER }}" "${{ secrets.NORDVPN_PASS }}" | sudo nordvpn login --legacy
-          sudo nordvpn set protocol udp
-          sudo nordvpn connect fr1031
-          sleep 5
-          sudo nordvpn status
-      
-      - name: Check IP and Save
-        run: |
-          IP=$(curl -s https://checkip.amazonaws.com/)
-          echo "$IP" > vpn-ip.txt
-          echo "Current IP: $IP"
-      
-      - name: Commit IP file
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add vpn-ip.txt
-          git commit -m "Update VPN IP - $(date -u)" || echo "No changes"
-          git push || echo "Nothing to push"
-      
-      - name: Disconnect VPN
-        if: always()
-        run: sudo nordvpn disconnect || true
+    - name: Install NordVPN
+      run: |
+        wget -qO - https://repo.nordvpn.com/gpg/nordvpn_public.asc | sudo tee /etc/apt/trusted.gpg.d/nordvpn_public.asc
+        echo "deb https://repo.nordvpn.com/deb/nordvpn/debian stable main" | sudo tee /etc/apt/sources.list.d/nordvpn.list
+        sudo apt update
+        sudo apt install -y nordvpn
+        
+    - name: Connect to NordVPN
+      env:
+        NORDVPN_TOKEN: ${{ secrets.NORDVPN_TOKEN }}
+      run: |
+        sudo nordvpn login --token $NORDVPN_TOKEN
+        sudo nordvpn set protocol udp
+        sudo nordvpn connect fr1031
+        
+    - name: Check IP and save
+      run: |
+        IP=$(curl -s https://checkip.amazonaws.com/)
+        echo "$IP" > ip.txt
+        echo "Current IP: $IP"
+        
+    - name: Commit IP file
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add ip.txt
+        git commit -m "Update IP - $(date)" || echo "No changes"
+        git push || echo "No changes to push"
+        
+    - name: Disconnect VPN
+      if: always()
+      run: sudo nordvpn disconnect || true
