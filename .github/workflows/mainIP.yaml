@@ -1,40 +1,42 @@
-name: CheckIPviaNORD
+name: CheckVPNIP
 
 on:
-  workflow_dispatch:
-    inputs:
-      server:
-        required: true
-        default: 'fr1031.nordvpn.com'
   schedule:
     - cron: '0 * * * *'  # Every hour
+  workflow_dispatch:  # Allow manual trigger
 
 jobs:
-  check:
+  check-ip:
     runs-on: ubuntu-latest
-    steps:
-    - run: |
-        # Install NordVPN
-        wget -qO - https://repo.nordvpn.com/gpg/nordvpn_public.asc | sudo apt-key add -
-        echo "deb https://repo.nordvpn.com/deb/nordvpn/debian stable main" | sudo tee /etc/apt/sources.list.d/nordvpn.list
-        sudo apt update && sudo apt install nordvpn -y
-        
-        # Login (requires credentials in secrets)
-        nordvpn login --username ${{ secrets.NORDVPN_USER }} --password ${{ secrets.NORDVPN_PASS }}
-        
-        # Connect to server
-        nordvpn connect ${{ inputs.server || 'fr1031.nordvpn.com' }}
-        
-        # Check IP and save to file
-        echo "Connected to: ${{ inputs.server || 'fr1031.nordvpn.com' }}"
-        IP=$(curl -s https://checkip.amazonaws.com/)
-        echo "IP: $IP"
-        echo "$IP" > ip.txt
-        echo "$(date): $IP" >> ip_history.txt
     
-    - uses: actions/upload-artifact@v4
-      with:
-        name: nordvpn-ip-files
-        path: |
-          ip.txt
-          ip_history.txt
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Install NordVPN
+        run: |
+          wget -qO - https://repo.nordvpn.com/gpg/nordvpn_public.asc | sudo apt-key add -
+          echo "deb https://repo.nordvpn.com/deb/nordvpn/debian stable main" | sudo tee /etc/apt/sources.list.d/nordvpn.list
+          sudo apt update
+          sudo apt install -y nordvpn
+      
+      - name: Connect to NordVPN
+        run: |
+          sudo nordvpn login --username "${{ secrets.NORDVPN_USER }}" --password "${{ secrets.NORDVPN_PASS }}"
+          sudo nordvpn set protocol udp
+          sudo nordvpn connect fr1031
+          sleep 5
+      
+      - name: Check IP and Save
+        run: |
+          IP=$(curl -s https://checkip.amazonaws.com/)
+          echo "$IP" > vpn-ip.txt
+          echo "Current IP: $IP"
+      
+      - name: Commit IP file
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add vpn-ip.txt
+          git commit -m "Update VPN IP - $(date -u)" || echo "No changes"
+          git push || echo "Nothing to push"
