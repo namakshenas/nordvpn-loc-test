@@ -1,4 +1,4 @@
-name: CheckVPNIP
+name: Check VPN IP
 
 on:
   schedule:
@@ -22,10 +22,11 @@ jobs:
       
       - name: Connect to NordVPN
         run: |
-          sudo nordvpn login --username "${{ secrets.NORDVPN_USER }}" --password "${{ secrets.NORDVPN_PASS }}"
+          printf '%s\n%s\n' "${{ secrets.NORDVPN_USER }}" "${{ secrets.NORDVPN_PASS }}" | sudo nordvpn login
           sudo nordvpn set protocol udp
           sudo nordvpn connect fr1031
           sleep 5
+          sudo nordvpn status
       
       - name: Check IP and Save
         run: |
@@ -40,3 +41,7 @@ jobs:
           git add vpn-ip.txt
           git commit -m "Update VPN IP - $(date -u)" || echo "No changes"
           git push || echo "Nothing to push"
+      
+      - name: Disconnect VPN
+        if: always()
+        run: sudo nordvpn disconnect || true
