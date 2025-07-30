@@ -27,42 +27,68 @@ jobs:
       env:
         NORDVPN_TOKEN: ${{ secrets.NORDVPN_TOKEN }}
       run: |
+        # Login
         sudo nordvpn login --token $NORDVPN_TOKEN
+        
+        # Configure settings
         sudo nordvpn set protocol udp || true
+        sudo nordvpn set technology openvpn || true
         
-        # Explicitly connect to fr1031
-        echo "Connecting to fr1031..."
-        sudo nordvpn connect fr1031
+        # Show available French servers for debugging
+        echo "Available French servers:"
+        sudo nordvpn cities france
         
-        # Wait for connection and verify
-        echo "Waiting for VPN connection..."
-        sleep 10
+        # Disconnect if already connected
+        sudo nordvpn disconnect || true
         
-        # Verify connection and server
-        if sudo nordvpn status | grep -q "Connected"; then
-          echo "Successfully connected to NordVPN"
-          sudo nordvpn status
-          
-          # Double-check we're on fr1031
-          if sudo nordvpn status | grep -q "fr1031"; then
-            echo "Confirmed: Connected to fr1031"
-          else
-            echo "Warning: Connected but not to fr1031"
+        # Connect specifically to server number
+        echo "Connecting to France server #1031..."
+        sudo nordvpn connect France 1031
+        
+        # Wait for connection
+        echo "Waiting for VPN connection to establish..."
+        for i in {1..20}; do
+          if sudo nordvpn status | grep -q "Connected"; then
+            echo "Connected after $i seconds"
+            break
           fi
-        else
-          echo "Failed to connect to NordVPN"
-          sudo nordvpn status
-          exit 1
-        fi
+          sleep 1
+        done
+        
+        # Show full status
+        echo "=== VPN Status ==="
+        sudo nordvpn status
+        echo "=================="
+        
+        # Test connection
+        echo "Testing connection..."
+        curl -s https://nordvpn.com/api/server/stats | grep -q "fr1031" && echo "Server confirmed: fr1031" || echo "Warning: Server mismatch"
         
     - name: Check IP and save
       run: |
-        echo "Checking connection..."
+        echo "=== Connection Details ==="
         sudo nordvpn status
-        echo "---"
-        IP=$(curl -s https://checkip.amazonaws.com/)
-        echo "$IP" > ip.txt
-        echo "Current IP: $IP"
+        echo ""
+        
+        # Get IP multiple times to ensure consistency
+        echo "Checking IP (attempt 1):"
+        IP1=$(curl -s https://checkip.amazonaws.com/)
+        echo "$IP1"
+        
+        sleep 2
+        
+        echo "Checking IP (attempt 2):"
+        IP2=$(curl -s https://checkip.amazonaws.com/)
+        echo "$IP2"
+        
+        if [ "$IP1" != "$IP2" ]; then
+          echo "Warning: IP changed between checks!"
+        fi
+        
+        # Save the IP
+        echo "$IP1" > ip.txt
+        echo ""
+        echo "Final IP saved: $IP1"
         
     - name: Commit IP file
       run: |
