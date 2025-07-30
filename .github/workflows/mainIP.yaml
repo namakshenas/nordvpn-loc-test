@@ -30,65 +30,25 @@ jobs:
         # Login
         sudo nordvpn login --token $NORDVPN_TOKEN
         
-        # Configure settings
+        # Set protocol to UDP
         sudo nordvpn set protocol udp || true
-        sudo nordvpn set technology openvpn || true
         
-        # Show available French servers for debugging
-        echo "Available French servers:"
-        sudo nordvpn cities france
-        
-        # Disconnect if already connected
-        sudo nordvpn disconnect || true
-        
-        # Connect specifically to server number
-        echo "Connecting to France server #1031..."
-        sudo nordvpn connect France 1031
+        # Connect to fr1031
+        echo "Connecting to server fr1031..."
+        sudo nordvpn connect fr1031
         
         # Wait for connection
-        echo "Waiting for VPN connection to establish..."
-        for i in {1..20}; do
-          if sudo nordvpn status | grep -q "Connected"; then
-            echo "Connected after $i seconds"
-            break
-          fi
-          sleep 1
-        done
+        sleep 10
         
-        # Show full status
+        # Verify connection
         echo "=== VPN Status ==="
         sudo nordvpn status
-        echo "=================="
-        
-        # Test connection
-        echo "Testing connection..."
-        curl -s https://nordvpn.com/api/server/stats | grep -q "fr1031" && echo "Server confirmed: fr1031" || echo "Warning: Server mismatch"
         
     - name: Check IP and save
       run: |
-        echo "=== Connection Details ==="
-        sudo nordvpn status
-        echo ""
-        
-        # Get IP multiple times to ensure consistency
-        echo "Checking IP (attempt 1):"
-        IP1=$(curl -s https://checkip.amazonaws.com/)
-        echo "$IP1"
-        
-        sleep 2
-        
-        echo "Checking IP (attempt 2):"
-        IP2=$(curl -s https://checkip.amazonaws.com/)
-        echo "$IP2"
-        
-        if [ "$IP1" != "$IP2" ]; then
-          echo "Warning: IP changed between checks!"
-        fi
-        
-        # Save the IP
-        echo "$IP1" > ip.txt
-        echo ""
-        echo "Final IP saved: $IP1"
+        IP=$(curl -s https://checkip.amazonaws.com/)
+        echo "$IP" > ip.txt
+        echo "Current IP: $IP"
         
     - name: Commit IP file
       run: |
@@ -99,5 +59,7 @@ jobs:
         git push || echo "No changes to push"
         
     - name: Disconnect VPN
+      if: always()
+      run: sudo nordvpn disconnect || true
       if: always()
       run: sudo nordvpn disconnect || true
