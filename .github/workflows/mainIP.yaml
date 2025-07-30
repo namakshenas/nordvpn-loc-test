@@ -29,10 +29,37 @@ jobs:
       run: |
         sudo nordvpn login --token $NORDVPN_TOKEN
         sudo nordvpn set protocol udp || true
+        
+        # Explicitly connect to fr1031
+        echo "Connecting to fr1031..."
         sudo nordvpn connect fr1031
+        
+        # Wait for connection and verify
+        echo "Waiting for VPN connection..."
+        sleep 10
+        
+        # Verify connection and server
+        if sudo nordvpn status | grep -q "Connected"; then
+          echo "Successfully connected to NordVPN"
+          sudo nordvpn status
+          
+          # Double-check we're on fr1031
+          if sudo nordvpn status | grep -q "fr1031"; then
+            echo "Confirmed: Connected to fr1031"
+          else
+            echo "Warning: Connected but not to fr1031"
+          fi
+        else
+          echo "Failed to connect to NordVPN"
+          sudo nordvpn status
+          exit 1
+        fi
         
     - name: Check IP and save
       run: |
+        echo "Checking connection..."
+        sudo nordvpn status
+        echo "---"
         IP=$(curl -s https://checkip.amazonaws.com/)
         echo "$IP" > ip.txt
         echo "Current IP: $IP"
