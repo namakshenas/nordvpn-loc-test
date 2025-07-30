@@ -34,8 +34,8 @@ jobs:
         sudo nordvpn set protocol udp || true
         
         # Connect to fr1031
-        echo "Connecting to server fr1031..."
-        sudo nordvpn connect fr1031
+        echo "Connecting to server #fr1031..."
+        sudo nordvpn connect "#fr1031"
         
         # Wait for connection
         sleep 10
@@ -59,7 +59,5 @@ jobs:
         git push || echo "No changes to push"
         
     - name: Disconnect VPN
-      if: always()
-      run: sudo nordvpn disconnect || true
       if: always()
       run: sudo nordvpn disconnect || true
