@@ -50,9 +50,9 @@ jobs:
           sudo apt-get install -y sshpass
       - name: Debug secrets
         run: |
-          echo "VPS_IP is ${VPS_IP:+set}"
-          echo "VPS_USER is ${VPS_USER:+set}"
-          echo "VPS_PASS is ${VPS_PASS:+set}"
+          echo "VPS_IP is ${secrets.VPS_IP:+set}"
+          echo "VPS_USER is ${secrets.VPS_USER:+set}"
+          echo "VPS_PASS is ${secrets.VPS_PASS:+set}"
       - name: Test ${{ matrix.country }} servers
         env:
           VPS_IP: ${{ secrets.VPS_IP }}
