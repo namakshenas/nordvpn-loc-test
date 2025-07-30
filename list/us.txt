@@ -171,7 +171,7 @@ us11506.nordvpn.com
 us11507.nordvpn.com
 us11508.nordvpn.com
 us11509.nordvpn.com
-us11573.nordvpn.com
+us11538.nordvpn.com
 us11596.nordvpn.com
 us11597.nordvpn.com
 us11598.nordvpn.com
@@ -213,6 +213,7 @@ us11732.nordvpn.com
 us11733.nordvpn.com
 us11734.nordvpn.com
 us11735.nordvpn.com
+us11794.nordvpn.com
 us11802.nordvpn.com
 us11803.nordvpn.com
 us11804.nordvpn.com
@@ -267,8 +268,7 @@ us11897.nordvpn.com
 us11898.nordvpn.com
 us11899.nordvpn.com
 us11900.nordvpn.com
-us11920.nordvpn.com
-us11921.nordvpn.com
+us11915.nordvpn.com
 us11933.nordvpn.com
 us11934.nordvpn.com
 us11935.nordvpn.com
@@ -414,7 +414,6 @@ us6459.nordvpn.com
 us6460.nordvpn.com
 us6461.nordvpn.com
 us6462.nordvpn.com
-us6534.nordvpn.com
 us6587.nordvpn.com
 us6588.nordvpn.com
 us6589.nordvpn.com
@@ -435,6 +434,7 @@ us6668.nordvpn.com
 us6670.nordvpn.com
 us6671.nordvpn.com
 us6672.nordvpn.com
+us6710.nordvpn.com
 us6724.nordvpn.com
 us6725.nordvpn.com
 us6741.nordvpn.com
@@ -735,7 +735,7 @@ us9282.nordvpn.com
 us9283.nordvpn.com
 us9284.nordvpn.com
 us9300.nordvpn.com
-us9326.nordvpn.com
+us9313.nordvpn.com
 us9402.nordvpn.com
 us9403.nordvpn.com
 us9404.nordvpn.com
