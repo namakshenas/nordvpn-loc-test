@@ -43,69 +43,46 @@ jobs:
           exit 1
         fi
         
-        # Create temp directory for results
-        mkdir -p temp_results
+        # Initialize JSON array
+        echo "[" > ips.json
+        first=true
         
-        # Function to check one server
-        check_server() {
-          local server="$1"
-          local index="$2"
-          local server_id="${server%.nordvpn.com}"
-          
-          echo "Checking $server_id..."
-          
-          if sudo nordvpn connect "$server_id" > /dev/null 2>&1; then
-            sleep 3  # Reduced wait time
-            local ip=$(curl -s https://checkip.amazonaws.com/ | tr -d '\n')
-            echo "$server_id: $ip"
-            printf '{"server":"%s","ip":"%s"}' "$server" "$ip" > "temp_results/${index}.json"
-            sudo nordvpn disconnect > /dev/null 2>&1
-          else
-            echo "$server_id: FAILED"
-            echo '{}' > "temp_results/${index}.json"
-          fi
-        }
-        
-        # Export function for parallel use
-        export -f check_server
-        
-        # Process servers in parallel (max 5 concurrent)
-        index=0
+        # Read servers and check each
         while IFS= read -r server || [ -n "$server" ]; do
+          # Skip empty lines and comments
           [[ -z "$server" || "$server" =~ ^#.*$ ]] && continue
           
-          # Run in background with job control
-          ((index++))
-          check_server "$server" "$index" &
+          # Remove .nordvpn.com suffix if present
+          server_id="${server%.nordvpn.com}"
           
-          # Limit concurrent jobs
-          if (( $(jobs -r | wc -l) >= 5 )); then
-            wait -n  # Wait for any job to finish
+          echo "Connecting to $server_id..."
+          
+          # Connect to server (using just the server ID)
+          if sudo nordvpn connect "$server_id"; then
+            sleep 3  # Wait for connection
+            
+            # Get IP
+            ip=$(curl -s https://checkip.amazonaws.com/ | tr -d '\n')
+            echo "Got IP: $ip"
+            
+            # Add to JSON (store original server name)
+            if [ "$first" = true ]; then
+              first=false
+            else
+              echo "," >> ips.json
+            fi
+            printf '{"server":"%s","ip":"%s"}' "$server" "$ip" >> ips.json
+            
+            # Disconnect
+            sudo nordvpn disconnect
+            sleep 2
+          else
+            echo "Failed to connect to $server_id"
           fi
         done < list/fr.txt
         
-        # Wait for all remaining jobs
-        wait
-        
-        # Combine results into final JSON
-        echo "[" > ips.json
-        first=true
-        for file in temp_results/*.json; do
-          [ -f "$file" ] || continue
-          content=$(cat "$file")
-          [ "$content" = "{}" ] && continue
-          
-          if [ "$first" = true ]; then
-            first=false
-          else
-            echo "," >> ips.json
-          fi
-          echo -n "$content" >> ips.json
-        done
+        # Close JSON array
         echo "]" >> ips.json
-        
-        # Cleanup
-        rm -rf temp_results
         
         # Logout
         sudo nordvpn logout --persist-token || true
@@ -118,6 +95,9 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+        git add ips.json
+        git commit -m "Update IPs - $(date -u)" || exit 0
+        git push
         git add ips.json
         git commit -m "Update IPs - $(date -u)" || exit 0
         git push
