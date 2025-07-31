@@ -1,0 +1,42 @@
+[
+  {
+    "server": "fr1004.nordvpn.com",
+    "ip": "109.69.110.151",
+    "lat": 184.995
+  },
+  {
+    "server": "fr1005.nordvpn.com",
+    "ip": "109.69.110.161",
+    "lat": 193.241
+  },
+  {
+    "server": "fr1006.nordvpn.com",
+    "ip": "109.69.110.174",
+    "lat": 122.356
+  },
+  {
+    "server": "fr1007.nordvpn.com",
+    "ip": "109.69.110.187",
+    "lat": 123.449
+  },
+  {
+    "server": "fr1008.nordvpn.com",
+    "ip": "109.69.110.196",
+    "lat": 125.554
+  },
+  {
+    "server": "fr995.nordvpn.com",
+    "ip": "91.205.106.152",
+    "lat": 114.230
+  },
+  {
+    "server": "fr996.nordvpn.com",
+    "ip": "91.205.106.142",
+    "lat": 110.281
+  },
+  {
+    "server": "fr997.nordvpn.com",
+    "ip": "91.205.106.118",
+    "lat": 136.259
+  }
+]
