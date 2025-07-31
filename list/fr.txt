@@ -1,3 +1,5 @@
+fr1004.nordvpn.com
+fr1005.nordvpn.com
 fr1006.nordvpn.com
 fr1007.nordvpn.com
 fr1008.nordvpn.com
@@ -289,3 +291,4 @@ fr994.nordvpn.com
 fr995.nordvpn.com
 fr996.nordvpn.com
 fr997.nordvpn.com
+fr998.nordvpn.com
