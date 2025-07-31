@@ -1,0 +1,76 @@
+name: NordVPNIPCheck
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Every 6 hours
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  check-ips:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Setup and Check IPs
+      env:
+        NORDVPN_TOKEN: ${{ secrets.NORDVPN_TOKEN }}
+      run: |
+        # Check if NordVPN is installed
+        if ! command -v nordvpn &> /dev/null; then
+          # Install NordVPN
+          wget -qO - https://repo.nordvpn.com/gpg/nordvpn_public.asc | sudo tee /etc/apt/trusted.gpg.d/nordvpn.asc
+          echo "deb https://repo.nordvpn.com/deb/nordvpn/debian stable main" | sudo tee /etc/apt/sources.list.d/nordvpn.list
+          sudo apt-get update
+          sudo apt-get install -y nordvpn
+        fi
+        
+        # Login with token
+        sudo nordvpn login --token "$NORDVPN_TOKEN"
+        
+        # Set UDP protocol
+        sudo nordvpn set protocol udp
+        
+        # Initialize JSON array
+        echo "[" > ips.json
+        first=true
+        
+        # Read servers and check each
+        while IFS= read -r server; do
+          # Skip empty lines
+          [ -z "$server" ] && continue
+          
+          # Connect to server
+          sudo nordvpn connect "$server"
+          sleep 5  # Wait for connection
+          
+          # Get IP
+          ip=$(curl -s https://checkip.amazonaws.com/)
+          
+          # Add to JSON
+          if [ "$first" = true ]; then
+            first=false
+          else
+            echo "," >> ips.json
+          fi
+          echo "{\"server\":\"$server\",\"ip\":\"$ip\"}" | tr -d '\n' >> ips.json
+          
+          # Disconnect
+          sudo nordvpn disconnect
+          sleep 2
+        done < list/fr.txt
+        
+        # Close JSON array
+        echo "]" >> ips.json
+        
+        # Logout
+        sudo nordvpn logout --persist-token
+    
+    - name: Commit results
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add ips.json
+        git commit -m "Update IPs - $(date -u)" || exit 0
+        git push
