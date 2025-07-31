@@ -17,6 +17,8 @@ jobs:
       env:
         NORDVPN_TOKEN: ${{ secrets.NORDVPN_TOKEN }}
       run: |
+        set -e  # Exit on error
+        
         # Check if NordVPN is installed
         if ! command -v nordvpn &> /dev/null; then
           # Install NordVPN
@@ -26,46 +28,65 @@ jobs:
           sudo apt-get install -y nordvpn
         fi
         
+        # Add runner user to nordvpn group
+        sudo usermod -aG nordvpn $USER
+        
         # Login with token
-        sudo nordvpn login --token "$NORDVPN_TOKEN"
+        sudo -E nordvpn login --token "$NORDVPN_TOKEN"
         
         # Set UDP protocol
-        sudo nordvpn set protocol udp
+        sudo nordvpn set protocol udp || echo "Protocol already set"
+        
+        # Check if server list exists
+        if [ ! -f "list/fr.txt" ]; then
+          echo "Error: list/fr.txt not found"
+          exit 1
+        fi
         
         # Initialize JSON array
         echo "[" > ips.json
         first=true
         
         # Read servers and check each
-        while IFS= read -r server; do
-          # Skip empty lines
-          [ -z "$server" ] && continue
+        while IFS= read -r server || [ -n "$server" ]; do
+          # Skip empty lines and comments
+          [[ -z "$server" || "$server" =~ ^#.*$ ]] && continue
+          
+          echo "Connecting to $server..."
           
           # Connect to server
-          sudo nordvpn connect "$server"
-          sleep 5  # Wait for connection
-          
-          # Get IP
-          ip=$(curl -s https://checkip.amazonaws.com/)
-          
-          # Add to JSON
-          if [ "$first" = true ]; then
-            first=false
+          if sudo nordvpn connect "$server"; then
+            sleep 5  # Wait for connection
+            
+            # Get IP
+            ip=$(curl -s https://checkip.amazonaws.com/ | tr -d '\n')
+            echo "Got IP: $ip"
+            
+            # Add to JSON
+            if [ "$first" = true ]; then
+              first=false
+            else
+              echo "," >> ips.json
+            fi
+            printf '{"server":"%s","ip":"%s"}' "$server" "$ip" >> ips.json
+            
+            # Disconnect
+            sudo nordvpn disconnect
+            sleep 2
           else
-            echo "," >> ips.json
+            echo "Failed to connect to $server"
           fi
-          echo "{\"server\":\"$server\",\"ip\":\"$ip\"}" | tr -d '\n' >> ips.json
-          
-          # Disconnect
-          sudo nordvpn disconnect
-          sleep 2
         done < list/fr.txt
         
         # Close JSON array
         echo "]" >> ips.json
         
         # Logout
-        sudo nordvpn logout --persist-token
+        sudo nordvpn logout --persist-token || true
+        
+        # Show result
+        echo "Generated ips.json:"
+        cat ips.json
     
     - name: Commit results
       run: |
