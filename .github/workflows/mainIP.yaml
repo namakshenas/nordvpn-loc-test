@@ -75,7 +75,7 @@ jobs:
             
             # Disconnect
             sudo nordvpn disconnect
-            sleep 2
+            sleep 120
           else
             echo "Failed to connect to $server_id"
           fi
