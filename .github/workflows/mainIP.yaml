@@ -52,17 +52,20 @@ jobs:
           # Skip empty lines and comments
           [[ -z "$server" || "$server" =~ ^#.*$ ]] && continue
           
-          echo "Connecting to $server..."
+          # Remove .nordvpn.com suffix if present
+          server_id="${server%.nordvpn.com}"
           
-          # Connect to server
-          if sudo nordvpn connect "$server"; then
+          echo "Connecting to $server_id..."
+          
+          # Connect to server (using just the server ID)
+          if sudo nordvpn connect "$server_id"; then
             sleep 5  # Wait for connection
             
             # Get IP
             ip=$(curl -s https://checkip.amazonaws.com/ | tr -d '\n')
             echo "Got IP: $ip"
             
-            # Add to JSON
+            # Add to JSON (store original server name)
             if [ "$first" = true ]; then
               first=false
             else
@@ -74,7 +77,7 @@ jobs:
             sudo nordvpn disconnect
             sleep 2
           else
-            echo "Failed to connect to $server"
+            echo "Failed to connect to $server_id"
           fi
         done < list/fr.txt
         
@@ -92,6 +95,9 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+        git add ips.json
+        git commit -m "Update IPs - $(date -u)" || exit 0
+        git push
         git add ips.json
         git commit -m "Update IPs - $(date -u)" || exit 0
         git push
