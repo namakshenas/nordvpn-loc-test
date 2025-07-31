@@ -2,8 +2,8 @@ name: NordVPNIPCheck
 
 on:
   schedule:
-    - cron: '0 */12 * * *'  # Every 6 hours
-  workflow_dispatch:  # Manual trigger
+    - cron: '0 2 * * *'
+  workflow_dispatch:
 
 jobs:
   check-ips:
@@ -95,9 +95,6 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add ips.json
-        git commit -m "Update IPs - $(date -u)" || exit 0
-        git push
         git add ips.json
         git commit -m "Update IPs - $(date -u)" || exit 0
         git push

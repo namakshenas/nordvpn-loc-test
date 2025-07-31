@@ -2,7 +2,7 @@ name: UpdateNordVPNlist
 
 on:
   schedule:
-    - cron: '0 0 */2 * *'  # At 00:00 every 2 days
+    - cron: '0 0 * * *'
 
   workflow_dispatch:
 
