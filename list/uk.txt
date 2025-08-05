@@ -56,10 +56,8 @@ uk1808.nordvpn.com
 uk1809.nordvpn.com
 uk1810.nordvpn.com
 uk1811.nordvpn.com
-uk1812.nordvpn.com
 uk1813.nordvpn.com
 uk1814.nordvpn.com
-uk1815.nordvpn.com
 uk1816.nordvpn.com
 uk1821.nordvpn.com
 uk1822.nordvpn.com
@@ -220,7 +218,6 @@ uk2082.nordvpn.com
 uk2083.nordvpn.com
 uk2084.nordvpn.com
 uk2085.nordvpn.com
-uk2086.nordvpn.com
 uk2087.nordvpn.com
 uk2088.nordvpn.com
 uk2089.nordvpn.com
@@ -245,7 +242,6 @@ uk2110.nordvpn.com
 uk2111.nordvpn.com
 uk2112.nordvpn.com
 uk2113.nordvpn.com
-uk2114.nordvpn.com
 uk2115.nordvpn.com
 uk2116.nordvpn.com
 uk2117.nordvpn.com
