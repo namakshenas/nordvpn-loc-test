@@ -1,13 +1,3 @@
-au529.nordvpn.com
-au530.nordvpn.com
-au531.nordvpn.com
-au532.nordvpn.com
-au533.nordvpn.com
-au534.nordvpn.com
-au535.nordvpn.com
-au536.nordvpn.com
-au537.nordvpn.com
-au538.nordvpn.com
 au569.nordvpn.com
 au570.nordvpn.com
 au576.nordvpn.com
