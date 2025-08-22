@@ -1,5 +1,3 @@
-sg455.nordvpn.com
-sg456.nordvpn.com
 sg465.nordvpn.com
 sg466.nordvpn.com
 sg474.nordvpn.com
@@ -12,12 +10,6 @@ sg480.nordvpn.com
 sg481.nordvpn.com
 sg482.nordvpn.com
 sg483.nordvpn.com
-sg490.nordvpn.com
-sg491.nordvpn.com
-sg493.nordvpn.com
-sg494.nordvpn.com
-sg507.nordvpn.com
-sg508.nordvpn.com
 sg517.nordvpn.com
 sg518.nordvpn.com
 sg519.nordvpn.com
@@ -50,3 +42,10 @@ sg545.nordvpn.com
 sg546.nordvpn.com
 sg547.nordvpn.com
 sg548.nordvpn.com
+sg617.nordvpn.com
+sg618.nordvpn.com
+sg619.nordvpn.com
+sg620.nordvpn.com
+sg621.nordvpn.com
+sg622.nordvpn.com
+sg623.nordvpn.com
