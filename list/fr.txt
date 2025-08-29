@@ -163,7 +163,6 @@ fr809.nordvpn.com
 fr810.nordvpn.com
 fr811.nordvpn.com
 fr812.nordvpn.com
-fr813.nordvpn.com
 fr814.nordvpn.com
 fr815.nordvpn.com
 fr816.nordvpn.com
