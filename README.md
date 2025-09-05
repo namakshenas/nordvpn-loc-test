@@ -10,4 +10,4 @@ Automatically updates server lists for NordVPN proxy servers, recommended by Nor
 - United Kingdom (uk)
 - United States (us)
 
-Updated every Friday via GitHub Actions.
+Updates every Friday via GitHub Actions.
