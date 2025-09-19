@@ -34,6 +34,7 @@ sg537.nordvpn.com
 sg538.nordvpn.com
 sg539.nordvpn.com
 sg540.nordvpn.com
+sg541.nordvpn.com
 sg542.nordvpn.com
 sg543.nordvpn.com
 sg544.nordvpn.com
