@@ -14,7 +14,7 @@ while IFS= read -r line; do
         ((count++))
         
         # Increase timeout to 2 seconds and use 2 packets
-        (ping -c 2 -W 2 "$ip" &>/dev/null && echo "{\"server\":\"$server\",\"ip\":\"$ip\"}" >> "$tmp") &
+        (ping -c 2 -W 2 "$ip" &>/dev/null && echo "{\"hostname\":\"$server\",\"ip\":\"$ip\"}" >> "$tmp") &
         
         # Limit parallel jobs to 50 at a time
         if (( count % 50 == 0 )); then
