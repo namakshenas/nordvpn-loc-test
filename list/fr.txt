@@ -136,6 +136,8 @@ fr774.nordvpn.com
 fr775.nordvpn.com
 fr776.nordvpn.com
 fr777.nordvpn.com
+fr778.nordvpn.com
+fr779.nordvpn.com
 fr780.nordvpn.com
 fr781.nordvpn.com
 fr789.nordvpn.com
