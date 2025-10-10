@@ -28,7 +28,6 @@ au646.nordvpn.com
 au647.nordvpn.com
 au648.nordvpn.com
 au649.nordvpn.com
-au650.nordvpn.com
 au651.nordvpn.com
 au653.nordvpn.com
 au654.nordvpn.com
