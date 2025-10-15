@@ -1,11 +1,13 @@
 [
-  {"hostname":"ca1534.nordvpn.com","ip":"37.19.212.232"}
-,
   {"hostname":"ca1535.nordvpn.com","ip":"37.19.212.237"}
+,
+  {"hostname":"ca1534.nordvpn.com","ip":"37.19.212.232"}
 ,
   {"hostname":"dk247.nordvpn.com","ip":"37.120.194.187"}
 ,
-  {"hostname":"es257.nordvpn.com","ip":"79.127.139.105"}
+  {"hostname":"gr57.nordvpn.com","ip":"194.116.208.16"}
+,
+  {"hostname":"gr58.nordvpn.com","ip":"194.116.208.18"}
 ,
   {"hostname":"ie173.nordvpn.com","ip":"193.56.252.204"}
 ,
@@ -13,23 +15,25 @@
 ,
   {"hostname":"jp599.nordvpn.com","ip":"156.146.35.111"}
 ,
-  {"hostname":"nl965.nordvpn.com","ip":"194.49.52.77"}
-,
-  {"hostname":"nl964.nordvpn.com","ip":"194.49.52.62"}
-,
-  {"hostname":"nl962.nordvpn.com","ip":"194.49.52.32"}
-,
-  {"hostname":"nl968.nordvpn.com","ip":"194.49.52.122"}
-,
-  {"hostname":"nl963.nordvpn.com","ip":"194.49.52.47"}
-,
-  {"hostname":"nl967.nordvpn.com","ip":"194.49.52.107"}
-,
-  {"hostname":"nl966.nordvpn.com","ip":"194.49.52.92"}
+  {"hostname":"nl961.nordvpn.com","ip":"194.49.52.17"}
 ,
   {"hostname":"nl960.nordvpn.com","ip":"194.49.52.2"}
 ,
-  {"hostname":"nl961.nordvpn.com","ip":"194.49.52.17"}
+  {"hostname":"nl962.nordvpn.com","ip":"194.49.52.32"}
+,
+  {"hostname":"nl963.nordvpn.com","ip":"194.49.52.47"}
+,
+  {"hostname":"nl964.nordvpn.com","ip":"194.49.52.62"}
+,
+  {"hostname":"nl966.nordvpn.com","ip":"194.49.52.92"}
+,
+  {"hostname":"nl967.nordvpn.com","ip":"194.49.52.107"}
+,
+  {"hostname":"nl965.nordvpn.com","ip":"194.49.52.77"}
+,
+  {"hostname":"nl968.nordvpn.com","ip":"194.49.52.122"}
+,
+  {"hostname":"no195.nordvpn.com","ip":"45.12.223.251"}
 ,
   {"hostname":"no215.nordvpn.com","ip":"45.84.39.102"}
 ,
@@ -37,17 +41,17 @@
 ,
   {"hostname":"sg554.nordvpn.com","ip":"149.102.250.55"}
 ,
-  {"hostname":"sr1.nordvpn.com","ip":"217.217.240.1"}
-,
   {"hostname":"sr2.nordvpn.com","ip":"217.217.240.21"}
+,
+  {"hostname":"sr1.nordvpn.com","ip":"217.217.240.1"}
 ,
   {"hostname":"tr71.nordvpn.com","ip":"45.136.155.147"}
 ,
   {"hostname":"tj2.nordvpn.com","ip":"212.32.92.22"}
 ,
-  {"hostname":"tz2.nordvpn.com","ip":"217.217.124.22"}
-,
   {"hostname":"tz1.nordvpn.com","ip":"217.217.124.1"}
+,
+  {"hostname":"tz2.nordvpn.com","ip":"217.217.124.22"}
 ,
   {"hostname":"uk2326.nordvpn.com","ip":"109.70.150.93"}
 ,
