@@ -8,13 +8,13 @@ count=0
 
 # Ping all IPs in parallel
 while IFS= read -r line; do
-    if [[ $line =~ \"server\":\"([^\"]+)\",\"ip\":\"([^\"]+)\" ]]; then
-        server="${BASH_REMATCH[1]}"
+    if [[ $line =~ \"hostname\":\"([^\"]+)\",\"ip\":\"([^\"]+)\" ]]; then
+        hostname="${BASH_REMATCH[1]}"
         ip="${BASH_REMATCH[2]}"
         ((count++))
         
         # Increase timeout to 2 seconds and use 2 packets
-        (ping -c 2 -W 2 "$ip" &>/dev/null && echo "{\"hostname\":\"$server\",\"ip\":\"$ip\"}" >> "$tmp") &
+        (ping -c 2 -W 2 "$ip" &>/dev/null && echo "{\"hostname\":\"$hostname\",\"ip\":\"$ip\"}" >> "$tmp") &
         
         # Limit parallel jobs to 50 at a time
         if (( count % 50 == 0 )); then
