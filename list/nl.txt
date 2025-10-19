@@ -1,7 +1,5 @@
 nl1000.nordvpn.com
 nl1001.nordvpn.com
-nl1006.nordvpn.com
-nl1007.nordvpn.com
 nl1008.nordvpn.com
 nl1009.nordvpn.com
 nl1054.nordvpn.com
