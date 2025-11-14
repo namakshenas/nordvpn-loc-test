@@ -151,6 +151,7 @@ nl911.nordvpn.com
 nl912.nordvpn.com
 nl913.nordvpn.com
 nl914.nordvpn.com
+nl915.nordvpn.com
 nl916.nordvpn.com
 nl917.nordvpn.com
 nl918.nordvpn.com
