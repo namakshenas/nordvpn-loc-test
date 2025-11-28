@@ -77,6 +77,7 @@ fr596.nordvpn.com
 fr597.nordvpn.com
 fr622.nordvpn.com
 fr639.nordvpn.com
+fr640.nordvpn.com
 fr641.nordvpn.com
 fr642.nordvpn.com
 fr660.nordvpn.com
