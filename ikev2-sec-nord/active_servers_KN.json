@@ -1,0 +1,145 @@
+[
+  {"hostname":"au762.nordvpn.com","ip":"144.48.38.155"}
+,
+  {"hostname":"ca1535.nordvpn.com","ip":"37.19.212.237"}
+,
+  {"hostname":"ca1534.nordvpn.com","ip":"37.19.212.232"}
+,
+  {"hostname":"ca1646.nordvpn.com","ip":"153.92.40.108"}
+,
+  {"hostname":"ca1729.nordvpn.com","ip":"84.39.151.14"}
+,
+  {"hostname":"ca1834.nordvpn.com","ip":"145.79.197.27"}
+,
+  {"hostname":"cz171.nordvpn.com","ip":"178.249.209.61"}
+,
+  {"hostname":"de1035.nordvpn.com","ip":"91.214.64.63"}
+,
+  {"hostname":"de1223.nordvpn.com","ip":"89.46.9.100"}
+,
+  {"hostname":"de1296.nordvpn.com","ip":"149.88.102.197"}
+,
+  {"hostname":"dk247.nordvpn.com","ip":"37.120.194.187"}
+,
+  {"hostname":"fi183.nordvpn.com","ip":"85.202.81.137"}
+,
+  {"hostname":"fr1107.nordvpn.com","ip":"155.133.65.241"}
+,
+  {"hostname":"fr1092.nordvpn.com","ip":"155.133.65.81"}
+,
+  {"hostname":"fr1093.nordvpn.com","ip":"155.133.65.91"}
+,
+  {"hostname":"fr1085.nordvpn.com","ip":"155.133.65.11"}
+,
+  {"hostname":"fr1091.nordvpn.com","ip":"155.133.65.71"}
+,
+  {"hostname":"fr1084.nordvpn.com","ip":"155.133.65.1"}
+,
+  {"hostname":"fr1086.nordvpn.com","ip":"155.133.65.21"}
+,
+  {"hostname":"fr1094.nordvpn.com","ip":"155.133.65.102"}
+,
+  {"hostname":"fr1087.nordvpn.com","ip":"155.133.65.31"}
+,
+  {"hostname":"fr1088.nordvpn.com","ip":"155.133.65.41"}
+,
+  {"hostname":"fr1089.nordvpn.com","ip":"155.133.65.51"}
+,
+  {"hostname":"fr1100.nordvpn.com","ip":"155.133.65.169"}
+,
+  {"hostname":"fr1095.nordvpn.com","ip":"155.133.65.113"}
+,
+  {"hostname":"fr1097.nordvpn.com","ip":"155.133.65.139"}
+,
+  {"hostname":"fr1099.nordvpn.com","ip":"155.133.65.159"}
+,
+  {"hostname":"fr1103.nordvpn.com","ip":"155.133.65.199"}
+,
+  {"hostname":"fr1104.nordvpn.com","ip":"155.133.65.209"}
+,
+  {"hostname":"fr1101.nordvpn.com","ip":"155.133.65.179"}
+,
+  {"hostname":"fr1090.nordvpn.com","ip":"155.133.65.61"}
+,
+  {"hostname":"fr1102.nordvpn.com","ip":"155.133.65.189"}
+,
+  {"hostname":"fr1105.nordvpn.com","ip":"155.133.65.219"}
+,
+  {"hostname":"fr1098.nordvpn.com","ip":"155.133.65.149"}
+,
+  {"hostname":"fr1096.nordvpn.com","ip":"155.133.65.129"}
+,
+  {"hostname":"fr1106.nordvpn.com","ip":"155.133.65.230"}
+,
+  {"hostname":"ie193.nordvpn.com","ip":"149.88.96.217"}
+,
+  {"hostname":"it381.nordvpn.com","ip":"138.199.54.239"}
+,
+  {"hostname":"jp560.nordvpn.com","ip":"89.187.161.159"}
+,
+  {"hostname":"jp558.nordvpn.com","ip":"89.187.161.154"}
+,
+  {"hostname":"jp599.nordvpn.com","ip":"156.146.35.111"}
+,
+  {"hostname":"jp598.nordvpn.com","ip":"212.102.50.215"}
+,
+  {"hostname":"mx96.nordvpn.com","ip":"155.133.15.3"}
+,
+  {"hostname":"mx51.nordvpn.com","ip":"192.154.196.41"}
+,
+  {"hostname":"nl854.nordvpn.com","ip":"194.127.172.109"}
+,
+  {"hostname":"no216.nordvpn.com","ip":"45.84.39.104"}
+,
+  {"hostname":"pl245.nordvpn.com","ip":"194.233.101.35"}
+,
+  {"hostname":"pt133.nordvpn.com","ip":"149.22.86.183"}
+,
+  {"hostname":"ro99.nordvpn.com","ip":"89.33.246.211"}
+,
+  {"hostname":"sg554.nordvpn.com","ip":"149.102.250.55"}
+,
+  {"hostname":"uk1610.nordvpn.com","ip":"195.206.171.131"}
+,
+  {"hostname":"uk1902.nordvpn.com","ip":"185.109.170.243"}
+,
+  {"hostname":"uk2092.nordvpn.com","ip":"194.35.233.54"}
+,
+  {"hostname":"uk2326.nordvpn.com","ip":"109.70.150.93"}
+,
+  {"hostname":"uk2506.nordvpn.com","ip":"194.35.234.189"}
+,
+  {"hostname":"uk2742.nordvpn.com","ip":"46.183.111.128"}
+,
+  {"hostname":"us11614.nordvpn.com","ip":"94.156.149.220"}
+,
+  {"hostname":"us11613.nordvpn.com","ip":"94.156.149.208"}
+,
+  {"hostname":"us11696.nordvpn.com","ip":"83.229.26.14"}
+,
+  {"hostname":"us11718.nordvpn.com","ip":"194.113.66.9"}
+,
+  {"hostname":"us12096.nordvpn.com","ip":"89.222.99.68"}
+,
+  {"hostname":"us12361.nordvpn.com","ip":"68.166.160.14"}
+,
+  {"hostname":"us4959.nordvpn.com","ip":"96.9.246.123"}
+,
+  {"hostname":"us4960.nordvpn.com","ip":"96.9.246.124"}
+,
+  {"hostname":"us5087.nordvpn.com","ip":"84.17.41.135"}
+,
+  {"hostname":"us5784.nordvpn.com","ip":"84.17.45.208"}
+,
+  {"hostname":"us5783.nordvpn.com","ip":"84.17.45.205"}
+,
+  {"hostname":"us5510.nordvpn.com","ip":"5.181.234.91"}
+,
+  {"hostname":"us8400.nordvpn.com","ip":"192.145.116.116"}
+,
+  {"hostname":"us9104.nordvpn.com","ip":"94.140.11.21"}
+,
+  {"hostname":"us9983.nordvpn.com","ip":"193.29.61.84"}
+,
+  {"hostname":"za153.nordvpn.com","ip":"149.102.248.201"}
+]
