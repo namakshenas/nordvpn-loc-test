@@ -182,12 +182,10 @@ au909.nordvpn.com
 au910.nordvpn.com
 au911.nordvpn.com
 au914.nordvpn.com
-au920.nordvpn.com
-au921.nordvpn.com
-au922.nordvpn.com
-au923.nordvpn.com
-au924.nordvpn.com
-au925.nordvpn.com
+au915.nordvpn.com
+au916.nordvpn.com
+au917.nordvpn.com
+au918.nordvpn.com
 au932.nordvpn.com
 au933.nordvpn.com
 au934.nordvpn.com
