@@ -29,13 +29,13 @@ wait
 echo "Found $(wc -l < "$tmp" | tr -d ' ') active servers"
 
 # Build JSON from results
-echo "[" > active_servers_SH_tel.json
+echo "[" > active_servers_I_pro.json
 first=true
 while IFS= read -r line; do
-    [ "$first" = true ] && first=false || echo "," >> active_servers_SH_tel.json
-    echo "  $line" >> active_servers_SH_tel.json
+    [ "$first" = true ] && first=false || echo "," >> active_servers_I_pro.json
+    echo "  $line" >> active_servers_I_pro.json
 done < "$tmp"
-echo "]" >> active_servers_SH_tel.json
+echo "]" >> active_servers_I_pro.json
 
 rm "$tmp"
-echo "Done. Output: active_servers_SH_tel.json"
+echo "Done. Output: active_servers_I_pro.json"
