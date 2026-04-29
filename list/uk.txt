@@ -46,6 +46,7 @@ uk1752.nordvpn.com
 uk1784.nordvpn.com
 uk1785.nordvpn.com
 uk1788.nordvpn.com
+uk1789.nordvpn.com
 uk1790.nordvpn.com
 uk1791.nordvpn.com
 uk1792.nordvpn.com
@@ -611,7 +612,6 @@ uk2774.nordvpn.com
 uk2775.nordvpn.com
 uk2776.nordvpn.com
 uk2809.nordvpn.com
-uk2810.nordvpn.com
 uk2811.nordvpn.com
 uk2812.nordvpn.com
 uk2813.nordvpn.com
