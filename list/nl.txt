@@ -46,7 +46,6 @@ nl1106.nordvpn.com
 nl1107.nordvpn.com
 nl1108.nordvpn.com
 nl1109.nordvpn.com
-nl1110.nordvpn.com
 nl1113.nordvpn.com
 nl1114.nordvpn.com
 nl1115.nordvpn.com
@@ -76,7 +75,6 @@ nl1140.nordvpn.com
 nl1141.nordvpn.com
 nl1142.nordvpn.com
 nl1143.nordvpn.com
-nl716.nordvpn.com
 nl717.nordvpn.com
 nl718.nordvpn.com
 nl719.nordvpn.com
