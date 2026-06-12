@@ -49,6 +49,7 @@ uk1789.nordvpn.com
 uk1790.nordvpn.com
 uk1791.nordvpn.com
 uk1792.nordvpn.com
+uk1806.nordvpn.com
 uk1807.nordvpn.com
 uk1808.nordvpn.com
 uk1809.nordvpn.com
@@ -145,7 +146,6 @@ uk1999.nordvpn.com
 uk2000.nordvpn.com
 uk2001.nordvpn.com
 uk2002.nordvpn.com
-uk2003.nordvpn.com
 uk2004.nordvpn.com
 uk2005.nordvpn.com
 uk2006.nordvpn.com
