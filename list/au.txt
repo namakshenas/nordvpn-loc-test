@@ -72,6 +72,7 @@ au752.nordvpn.com
 au753.nordvpn.com
 au754.nordvpn.com
 au755.nordvpn.com
+au756.nordvpn.com
 au757.nordvpn.com
 au758.nordvpn.com
 au759.nordvpn.com
