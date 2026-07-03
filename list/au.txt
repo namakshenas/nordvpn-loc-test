@@ -219,9 +219,6 @@ au952.nordvpn.com
 au953.nordvpn.com
 au954.nordvpn.com
 au955.nordvpn.com
-au960.nordvpn.com
-au961.nordvpn.com
-au962.nordvpn.com
 au963.nordvpn.com
 au964.nordvpn.com
 au965.nordvpn.com
