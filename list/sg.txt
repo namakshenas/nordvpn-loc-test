@@ -1,7 +1,3 @@
-sg610.nordvpn.com
-sg611.nordvpn.com
-sg612.nordvpn.com
-sg613.nordvpn.com
 sg642.nordvpn.com
 sg643.nordvpn.com
 sg644.nordvpn.com
@@ -18,6 +14,16 @@ sg654.nordvpn.com
 sg655.nordvpn.com
 sg656.nordvpn.com
 sg657.nordvpn.com
+sg658.nordvpn.com
+sg659.nordvpn.com
+sg660.nordvpn.com
+sg661.nordvpn.com
+sg662.nordvpn.com
+sg663.nordvpn.com
+sg664.nordvpn.com
+sg665.nordvpn.com
+sg666.nordvpn.com
+sg667.nordvpn.com
 sg668.nordvpn.com
 sg669.nordvpn.com
 sg670.nordvpn.com
@@ -35,6 +41,10 @@ sg681.nordvpn.com
 sg682.nordvpn.com
 sg683.nordvpn.com
 sg684.nordvpn.com
+sg685.nordvpn.com
+sg686.nordvpn.com
+sg687.nordvpn.com
+sg688.nordvpn.com
 sg689.nordvpn.com
 sg690.nordvpn.com
 sg691.nordvpn.com
