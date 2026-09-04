@@ -95,7 +95,6 @@ au1138.nordvpn.com
 au1139.nordvpn.com
 au1140.nordvpn.com
 au1141.nordvpn.com
-au1142.nordvpn.com
 au1143.nordvpn.com
 au1144.nordvpn.com
 au1145.nordvpn.com
@@ -121,6 +120,7 @@ au1181.nordvpn.com
 au734.nordvpn.com
 au735.nordvpn.com
 au736.nordvpn.com
+au737.nordvpn.com
 au738.nordvpn.com
 au739.nordvpn.com
 au740.nordvpn.com
