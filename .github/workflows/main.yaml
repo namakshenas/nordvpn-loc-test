@@ -2,7 +2,7 @@ name: UpdateNordVPNlist
 
 on:
   schedule:
-    - cron: '0 0 * * 5'
+    - cron: '0 0 * * *'
 
   workflow_dispatch:
 
@@ -16,8 +16,8 @@ jobs:
       - name: Download server lists and update list files
         run: |
           mkdir -p list
-          declare -a countrycode=("au" "fr" "nl" "sg" "uk" "us")
-          declare -a countryid=("13" "74" "153" "195" "227" "228")
+          declare -a countrycode=("au" "de" "fr" "nl" "sg" "uk" "us")
+          declare -a countryid=("13" "81" "74" "153" "195" "227" "228")
           for (( i=0; i<${#countrycode[@]}; i++ ));
           do
             curl --silent "https://api.nordvpn.com/v1/servers/recommendations?filters\[country_id\]=${countryid[$i]}&filters\[servers_technologies\]\[identifier\]=openvpn_udp&limit=1000" | jq --raw-output '.[].hostname' | sort > list/${countrycode[$i]}.txt
