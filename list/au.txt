@@ -1,3 +1,11 @@
+au1004.nordvpn.com
+au1005.nordvpn.com
+au1006.nordvpn.com
+au1007.nordvpn.com
+au1008.nordvpn.com
+au1009.nordvpn.com
+au1010.nordvpn.com
+au1011.nordvpn.com
 au1012.nordvpn.com
 au1013.nordvpn.com
 au1014.nordvpn.com
