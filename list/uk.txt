@@ -13,7 +13,6 @@ uk1743.nordvpn.com
 uk1744.nordvpn.com
 uk1745.nordvpn.com
 uk1746.nordvpn.com
-uk1747.nordvpn.com
 uk1748.nordvpn.com
 uk1749.nordvpn.com
 uk1750.nordvpn.com
@@ -465,7 +464,7 @@ uk6177.nordvpn.com
 uk6178.nordvpn.com
 uk6179.nordvpn.com
 uk6180.nordvpn.com
-uk6182.nordvpn.com
+uk6181.nordvpn.com
 uk6209.nordvpn.com
 uk6210.nordvpn.com
 uk6211.nordvpn.com
