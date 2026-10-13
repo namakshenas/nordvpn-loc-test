@@ -1,7 +1,9 @@
 fr1004.nordvpn.com
+fr1005.nordvpn.com
 fr1006.nordvpn.com
 fr1007.nordvpn.com
 fr1008.nordvpn.com
+fr1009.nordvpn.com
 fr1010.nordvpn.com
 fr1011.nordvpn.com
 fr1012.nordvpn.com
@@ -102,7 +104,6 @@ fr1256.nordvpn.com
 fr1258.nordvpn.com
 fr1259.nordvpn.com
 fr1260.nordvpn.com
-fr1261.nordvpn.com
 fr1262.nordvpn.com
 fr1263.nordvpn.com
 fr1264.nordvpn.com
@@ -123,9 +124,11 @@ fr1278.nordvpn.com
 fr1279.nordvpn.com
 fr1280.nordvpn.com
 fr1281.nordvpn.com
+fr1282.nordvpn.com
 fr1283.nordvpn.com
 fr1284.nordvpn.com
 fr1285.nordvpn.com
+fr1286.nordvpn.com
 fr1287.nordvpn.com
 fr1288.nordvpn.com
 fr1313.nordvpn.com
@@ -154,7 +157,6 @@ fr898.nordvpn.com
 fr899.nordvpn.com
 fr900.nordvpn.com
 fr901.nordvpn.com
-fr902.nordvpn.com
 fr903.nordvpn.com
 fr904.nordvpn.com
 fr905.nordvpn.com
