@@ -368,6 +368,7 @@ uk2990.nordvpn.com
 uk2991.nordvpn.com
 uk6000.nordvpn.com
 uk6001.nordvpn.com
+uk6002.nordvpn.com
 uk6003.nordvpn.com
 uk6004.nordvpn.com
 uk6005.nordvpn.com
