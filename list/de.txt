@@ -123,7 +123,10 @@ de1442.nordvpn.com
 de1443.nordvpn.com
 de1445.nordvpn.com
 de1446.nordvpn.com
+de1447.nordvpn.com
 de1448.nordvpn.com
+de1449.nordvpn.com
+de1450.nordvpn.com
 de1451.nordvpn.com
 de1452.nordvpn.com
 de1453.nordvpn.com
@@ -160,6 +163,7 @@ de1488.nordvpn.com
 de1489.nordvpn.com
 de1490.nordvpn.com
 de1491.nordvpn.com
+de1492.nordvpn.com
 de1493.nordvpn.com
 de1494.nordvpn.com
 de1495.nordvpn.com
