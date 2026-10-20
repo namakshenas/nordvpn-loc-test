@@ -59,6 +59,7 @@ nl1262.nordvpn.com
 nl1263.nordvpn.com
 nl1264.nordvpn.com
 nl1265.nordvpn.com
+nl1266.nordvpn.com
 nl1267.nordvpn.com
 nl1268.nordvpn.com
 nl1269.nordvpn.com
@@ -96,6 +97,7 @@ nl1302.nordvpn.com
 nl1303.nordvpn.com
 nl1304.nordvpn.com
 nl1305.nordvpn.com
+nl1306.nordvpn.com
 nl1307.nordvpn.com
 nl1308.nordvpn.com
 nl815.nordvpn.com
