@@ -73,7 +73,12 @@ au1103.nordvpn.com
 au1104.nordvpn.com
 au1105.nordvpn.com
 au1106.nordvpn.com
+au1107.nordvpn.com
+au1108.nordvpn.com
 au1109.nordvpn.com
+au1110.nordvpn.com
+au1111.nordvpn.com
+au1112.nordvpn.com
 au1113.nordvpn.com
 au1114.nordvpn.com
 au1115.nordvpn.com
