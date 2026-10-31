@@ -21,7 +21,6 @@ au1023.nordvpn.com
 au1024.nordvpn.com
 au1025.nordvpn.com
 au1026.nordvpn.com
-au1027.nordvpn.com
 au1028.nordvpn.com
 au1029.nordvpn.com
 au1030.nordvpn.com
