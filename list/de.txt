@@ -11,7 +11,6 @@ de1120.nordvpn.com
 de1121.nordvpn.com
 de1122.nordvpn.com
 de1123.nordvpn.com
-de1124.nordvpn.com
 de1125.nordvpn.com
 de1126.nordvpn.com
 de1127.nordvpn.com
@@ -50,7 +49,6 @@ de1209.nordvpn.com
 de1210.nordvpn.com
 de1211.nordvpn.com
 de1212.nordvpn.com
-de1213.nordvpn.com
 de1214.nordvpn.com
 de1215.nordvpn.com
 de1216.nordvpn.com
@@ -166,7 +164,6 @@ de1491.nordvpn.com
 de1492.nordvpn.com
 de1493.nordvpn.com
 de1494.nordvpn.com
-de1495.nordvpn.com
 de1496.nordvpn.com
 de1497.nordvpn.com
 de1498.nordvpn.com
