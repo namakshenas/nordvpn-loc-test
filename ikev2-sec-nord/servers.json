@@ -39,8 +39,6 @@
 ,
   {"hostname":"ae69.nordvpn.com","ip":"195.86.23.29"}
 ,
-  {"hostname":"ae70.nordvpn.com","ip":"135.136.7.147"}
-,
   {"hostname":"ae71.nordvpn.com","ip":"146.70.238.3"}
 ,
   {"hostname":"ae72.nordvpn.com","ip":"146.70.238.179"}
@@ -1074,26 +1072,6 @@
   {"hostname":"bf1.nordvpn.com","ip":"186.247.50.1"}
 ,
   {"hostname":"bf2.nordvpn.com","ip":"186.247.50.22"}
-,
-  {"hostname":"bg38.nordvpn.com","ip":"217.138.202.147"}
-,
-  {"hostname":"bg46.nordvpn.com","ip":"217.138.202.91"}
-,
-  {"hostname":"bg47.nordvpn.com","ip":"217.138.202.99"}
-,
-  {"hostname":"bg48.nordvpn.com","ip":"217.138.202.107"}
-,
-  {"hostname":"bg49.nordvpn.com","ip":"217.138.202.115"}
-,
-  {"hostname":"bg50.nordvpn.com","ip":"217.138.202.123"}
-,
-  {"hostname":"bg51.nordvpn.com","ip":"217.138.202.131"}
-,
-  {"hostname":"bg52.nordvpn.com","ip":"217.138.202.139"}
-,
-  {"hostname":"bg53.nordvpn.com","ip":"217.138.202.75"}
-,
-  {"hostname":"bg54.nordvpn.com","ip":"217.138.202.83"}
 ,
   {"hostname":"bg80.nordvpn.com","ip":"187.15.105.3"}
 ,
