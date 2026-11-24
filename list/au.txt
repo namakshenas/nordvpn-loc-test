@@ -53,6 +53,7 @@ au1055.nordvpn.com
 au1056.nordvpn.com
 au1057.nordvpn.com
 au1058.nordvpn.com
+au1060.nordvpn.com
 au1061.nordvpn.com
 au1062.nordvpn.com
 au1069.nordvpn.com
