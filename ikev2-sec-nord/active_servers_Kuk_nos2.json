@@ -1,31 +1,29 @@
 [
-  {"hostname":"at159.nordvpn.com","ip":"154.47.19.241"}
-,
-  {"hostname":"at160.nordvpn.com","ip":"154.47.19.243"}
-,
   {"hostname":"at158.nordvpn.com","ip":"154.47.19.164"}
 ,
   {"hostname":"at157.nordvpn.com","ip":"154.47.19.162"}
 ,
-  {"hostname":"at161.nordvpn.com","ip":"154.47.19.167"}
+  {"hostname":"at160.nordvpn.com","ip":"154.47.19.243"}
 ,
-  {"hostname":"at194.nordvpn.com","ip":"187.15.157.113"}
-,
-  {"hostname":"at192.nordvpn.com","ip":"187.15.157.87"}
-,
-  {"hostname":"at191.nordvpn.com","ip":"187.15.157.73"}
+  {"hostname":"at159.nordvpn.com","ip":"154.47.19.241"}
 ,
   {"hostname":"at166.nordvpn.com","ip":"149.40.52.47"}
 ,
-  {"hostname":"at162.nordvpn.com","ip":"154.47.19.169"}
+  {"hostname":"at163.nordvpn.com","ip":"149.40.52.40"}
 ,
-  {"hostname":"at164.nordvpn.com","ip":"149.40.52.42"}
+  {"hostname":"at161.nordvpn.com","ip":"154.47.19.167"}
 ,
   {"hostname":"at165.nordvpn.com","ip":"149.40.52.45"}
 ,
-  {"hostname":"at163.nordvpn.com","ip":"149.40.52.40"}
+  {"hostname":"at164.nordvpn.com","ip":"149.40.52.42"}
 ,
-  {"hostname":"be279.nordvpn.com","ip":"149.22.90.154"}
+  {"hostname":"at162.nordvpn.com","ip":"154.47.19.169"}
+,
+  {"hostname":"at191.nordvpn.com","ip":"187.15.157.73"}
+,
+  {"hostname":"at192.nordvpn.com","ip":"187.15.157.87"}
+,
+  {"hostname":"at194.nordvpn.com","ip":"187.15.157.113"}
 ,
   {"hostname":"be237.nordvpn.com","ip":"149.22.90.148"}
 ,
@@ -33,51 +31,51 @@
 ,
   {"hostname":"be278.nordvpn.com","ip":"149.22.90.152"}
 ,
-  {"hostname":"ca1847.nordvpn.com","ip":"84.20.25.41"}
-,
-  {"hostname":"ch221.nordvpn.com","ip":"91.132.136.235"}
+  {"hostname":"be279.nordvpn.com","ip":"149.22.90.154"}
 ,
   {"hostname":"ch-se19.nordvpn.com","ip":"185.230.125.107"}
 ,
-  {"hostname":"ch437.nordvpn.com","ip":"149.50.214.119"}
+  {"hostname":"ch221.nordvpn.com","ip":"91.132.136.235"}
 ,
   {"hostname":"ch436.nordvpn.com","ip":"149.50.214.117"}
 ,
-  {"hostname":"ch486.nordvpn.com","ip":"149.50.214.52"}
-,
-  {"hostname":"ch485.nordvpn.com","ip":"149.50.214.50"}
+  {"hostname":"ch437.nordvpn.com","ip":"149.50.214.119"}
 ,
   {"hostname":"ch487.nordvpn.com","ip":"149.50.214.55"}
 ,
   {"hostname":"ch488.nordvpn.com","ip":"149.50.214.57"}
 ,
+  {"hostname":"ch486.nordvpn.com","ip":"149.50.214.52"}
+,
+  {"hostname":"ch485.nordvpn.com","ip":"149.50.214.50"}
+,
   {"hostname":"cz115.nordvpn.com","ip":"193.9.112.75"}
 ,
-  {"hostname":"cz125.nordvpn.com","ip":"217.138.199.35"}
-,
-  {"hostname":"cz117.nordvpn.com","ip":"217.138.199.19"}
-,
-  {"hostname":"cz124.nordvpn.com","ip":"217.138.199.43"}
-,
   {"hostname":"cz114.nordvpn.com","ip":"193.9.112.91"}
-,
-  {"hostname":"cz123.nordvpn.com","ip":"217.138.199.51"}
-,
-  {"hostname":"cz122.nordvpn.com","ip":"193.9.112.235"}
 ,
   {"hostname":"cz118.nordvpn.com","ip":"217.138.199.11"}
 ,
   {"hostname":"cz103.nordvpn.com","ip":"185.156.174.91"}
 ,
-  {"hostname":"cz121.nordvpn.com","ip":"193.9.112.243"}
+  {"hostname":"cz123.nordvpn.com","ip":"217.138.199.51"}
 ,
   {"hostname":"cz116.nordvpn.com","ip":"193.9.112.83"}
 ,
-  {"hostname":"cz120.nordvpn.com","ip":"193.9.112.251"}
+  {"hostname":"cz102.nordvpn.com","ip":"185.156.174.3"}
+,
+  {"hostname":"cz117.nordvpn.com","ip":"217.138.199.19"}
+,
+  {"hostname":"cz124.nordvpn.com","ip":"217.138.199.43"}
+,
+  {"hostname":"cz125.nordvpn.com","ip":"217.138.199.35"}
 ,
   {"hostname":"cz119.nordvpn.com","ip":"217.138.199.3"}
 ,
-  {"hostname":"cz102.nordvpn.com","ip":"185.156.174.3"}
+  {"hostname":"cz121.nordvpn.com","ip":"193.9.112.243"}
+,
+  {"hostname":"cz122.nordvpn.com","ip":"193.9.112.235"}
+,
+  {"hostname":"cz120.nordvpn.com","ip":"193.9.112.251"}
 ,
   {"hostname":"cz93.nordvpn.com","ip":"217.138.199.27"}
 ,
@@ -87,47 +85,47 @@
 ,
   {"hostname":"dk215.nordvpn.com","ip":"2.58.46.27"}
 ,
-  {"hostname":"es150.nordvpn.com","ip":"185.183.106.19"}
-,
   {"hostname":"es151.nordvpn.com","ip":"185.183.106.27"}
 ,
   {"hostname":"es149.nordvpn.com","ip":"185.183.106.227"}
 ,
+  {"hostname":"es150.nordvpn.com","ip":"185.183.106.19"}
+,
   {"hostname":"es188.nordvpn.com","ip":"185.93.182.251"}
 ,
-  {"hostname":"ie178.nordvpn.com","ip":"149.34.243.39"}
+  {"hostname":"ie149.nordvpn.com","ip":"146.70.90.3"}
 ,
   {"hostname":"ie152.nordvpn.com","ip":"146.70.90.27"}
 ,
-  {"hostname":"ie176.nordvpn.com","ip":"149.34.243.34"}
+  {"hostname":"ie179.nordvpn.com","ip":"149.34.243.41"}
+,
+  {"hostname":"ie150.nordvpn.com","ip":"146.70.90.11"}
 ,
   {"hostname":"ie177.nordvpn.com","ip":"149.34.243.36"}
 ,
   {"hostname":"ie151.nordvpn.com","ip":"146.70.90.19"}
 ,
-  {"hostname":"ie149.nordvpn.com","ip":"146.70.90.3"}
+  {"hostname":"ie178.nordvpn.com","ip":"149.34.243.39"}
 ,
-  {"hostname":"ie150.nordvpn.com","ip":"146.70.90.11"}
-,
-  {"hostname":"ie179.nordvpn.com","ip":"149.34.243.41"}
-,
-  {"hostname":"ie214.nordvpn.com","ip":"149.34.243.214"}
+  {"hostname":"ie176.nordvpn.com","ip":"149.34.243.34"}
 ,
   {"hostname":"ie215.nordvpn.com","ip":"149.34.243.216"}
 ,
-  {"hostname":"jp598.nordvpn.com","ip":"212.102.50.215"}
+  {"hostname":"ie214.nordvpn.com","ip":"149.34.243.214"}
 ,
   {"hostname":"jp560.nordvpn.com","ip":"89.187.161.159"}
 ,
   {"hostname":"jp558.nordvpn.com","ip":"89.187.161.154"}
 ,
+  {"hostname":"jp598.nordvpn.com","ip":"212.102.50.215"}
+,
   {"hostname":"jp599.nordvpn.com","ip":"156.146.35.111"}
 ,
   {"hostname":"nl-se23.nordvpn.com","ip":"186.247.168.175"}
 ,
-  {"hostname":"pt151.nordvpn.com","ip":"79.127.131.148"}
-,
   {"hostname":"pt150.nordvpn.com","ip":"79.127.131.146"}
+,
+  {"hostname":"pt151.nordvpn.com","ip":"79.127.131.148"}
 ,
   {"hostname":"ro75.nordvpn.com","ip":"89.36.224.243"}
 ,
@@ -135,23 +133,23 @@
 ,
   {"hostname":"ro74.nordvpn.com","ip":"89.36.224.251"}
 ,
-  {"hostname":"se401.nordvpn.com","ip":"37.120.209.227"}
+  {"hostname":"se398.nordvpn.com","ip":"37.120.209.203"}
 ,
   {"hostname":"se400.nordvpn.com","ip":"37.120.209.219"}
 ,
-  {"hostname":"se393.nordvpn.com","ip":"37.120.209.163"}
-,
-  {"hostname":"se396.nordvpn.com","ip":"37.120.209.187"}
-,
-  {"hostname":"se398.nordvpn.com","ip":"37.120.209.203"}
-,
   {"hostname":"se399.nordvpn.com","ip":"37.120.209.211"}
 ,
-  {"hostname":"se397.nordvpn.com","ip":"37.120.209.195"}
+  {"hostname":"se396.nordvpn.com","ip":"37.120.209.187"}
 ,
   {"hostname":"se394.nordvpn.com","ip":"37.120.209.171"}
 ,
   {"hostname":"se395.nordvpn.com","ip":"37.120.209.179"}
+,
+  {"hostname":"se397.nordvpn.com","ip":"37.120.209.195"}
+,
+  {"hostname":"se393.nordvpn.com","ip":"37.120.209.163"}
+,
+  {"hostname":"se401.nordvpn.com","ip":"37.120.209.227"}
 ,
   {"hostname":"sg554.nordvpn.com","ip":"149.102.250.55"}
 ,
@@ -161,7 +159,7 @@
 ,
   {"hostname":"us11650.nordvpn.com","ip":"45.144.114.22"}
 ,
-  {"hostname":"us5784.nordvpn.com","ip":"84.17.45.208"}
-,
   {"hostname":"us5783.nordvpn.com","ip":"84.17.45.205"}
+,
+  {"hostname":"us5784.nordvpn.com","ip":"84.17.45.208"}
 ]
